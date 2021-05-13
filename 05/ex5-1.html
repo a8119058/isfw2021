@@ -13,12 +13,10 @@
         function button1Pressed() {
             doSelect();
         }
-
         function button2Pressed(){
             find();
         }
 
-       
         async function doSelect() {
             var sql = 'select * from Tweets order by time desc limit 20';
             var objects = await osql.connect(sql);
