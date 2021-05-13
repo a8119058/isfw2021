@@ -14,6 +14,10 @@
             doSelect();
         }
 
+        function button2Pressed(){
+            find();
+        }
+
        
         async function doSelect() {
             var sql = 'select * from Tweets order by time desc limit 20';
@@ -29,9 +33,9 @@
             document.getElementById('result').innerHTML = html;
         }
 
-        async function search(){
-
-
+        async function find(){
+            var check = document.getElementById("search").value;
+            var sql = 'select * from Tweets where tweet like "%' + check + '%" order by time desc';
             var objects = await osql.connect(sql);
             console.log(objects);
             var html = '';
@@ -51,11 +55,10 @@
 
 <body>
     <h1>Tweets</h1>
+    <input id = "search" type="text" value = "">
+    <button onclick = "button2Pressed()">検索</button>
+    <button onclick = "button1Pressed()">更新</button>
    
-    <button onclick="button1Pressed()">更新</button>
-    
-
-
     <hr>
     <p id="result">xxxx</p>
 </body>
