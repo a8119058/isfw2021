@@ -10,7 +10,7 @@
     <script type="text/javascript" src="../osql.js"></script>
 
     <script>
-        async function buttonPressed() {
+        async function button1Pressed() {
             var userid = document.getElementById('tf1').value;
             var password = document.getElementById('tf2').value;
 
@@ -30,6 +30,7 @@
 
             location.href = 'usertop.html';
         }
+
     </script>
 
 </head>
@@ -42,7 +43,7 @@
         <br>
         password:<input id="tf2" value="" type="password">
         <br>
-        <button onclick="buttonPressed()">ログイン</button>
+        <button onclick="button1Pressed()">ログイン</button>
         <p id="result"></p>
     </div>
     <hr>
