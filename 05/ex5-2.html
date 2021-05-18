@@ -14,13 +14,10 @@
             doInsert();
         }
 
-        /*function button2Pressed(){
-            //doSelect();
-        }*/
-
-        $().ready(function () {
-            doSelect()
-        });
+        function button2Pressed(){
+            setInterval(doSelect,2000);
+            
+        }
 
         async function doInsert() {
             var userid = document.getElementById('tf1').value;
@@ -58,7 +55,9 @@
     <br>
     tweet:<input id="tf2" type="textfield" value = "">
     <button onclick="button1Pressed()">tweet</button>
+    <button onclick = "button2Pressed()">更新</button>
     <br>
+    
     <p id="result"></p>
 
 </body>
