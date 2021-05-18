@@ -20,6 +20,7 @@
             console.log(objects);
         }
 
+
         async function execSelect() {
             var sql = 'select * from Users';
             var objects = await osql.connect(sql);
@@ -38,6 +39,8 @@
             html = html + '</table>';
             document.getElementById('result').innerHTML = html;
         }
+
+
 
     </script>
 
