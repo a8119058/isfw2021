@@ -15,7 +15,7 @@
         });
 
         async function remove(x) {
-            var sql = `delete from Users where id = '${x}'`
+            var sql = `delete from Users where id = '${x}'`;
             var objects = await osql.connect(sql);
             console.log(objects);
         }
@@ -40,10 +40,6 @@
         }
 
        
-
-      
-           
-
 
     </script>
 
