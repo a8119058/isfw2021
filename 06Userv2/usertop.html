@@ -16,8 +16,8 @@
 
         function init(){
             var name = sessionStorage.getItem('username');
-            console.log(name);
             document.getElementById('welcome').innerHTML = 'ようこそ'+ name + 'さん';
+        
         };
 
     </script>
@@ -27,6 +27,9 @@
 <body>
     <h1>ユーザトップ</h1>
     <p id="welcome"></p>
+    <ul>
+        <li ><a href = "update.html?name = ${username}">変更</a></li>
+    </ul>
     <hr>
 
 </body>
